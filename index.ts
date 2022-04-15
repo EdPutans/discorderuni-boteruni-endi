@@ -36,6 +36,12 @@ client.on('interactionCreate', async interaction => {
 
 client.on('messageCreate', async message => {
   if (message.author.id === clientId) return;
+
+  if (message.content.includes('banana')) {
+    message.reply({
+      content: "Hello banana person",
+    })
+  }
   // if (message.content.includes('yeet')) return;
   // ed has disgracefully failed his students here ^ RIP.
 
